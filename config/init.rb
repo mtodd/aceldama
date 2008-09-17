@@ -69,7 +69,7 @@ end
 # if you need a database.
 
 # Uncomment for DataMapper ORM
-# use_orm :datamapper
+use_orm :datamapper
 
 # Uncomment for ActiveRecord ORM
 # use_orm :activerecord
@@ -215,7 +215,7 @@ Halcyon.config.use do |c|
     :level => 'debug'
   }
   
-  c[:paths].define(:controller => Halcyon.root/'app'/'controllers')
+  c[:paths].define(:controller => Halcyon.root/'app'/'controllers'/'service')
   
   # = Application
   # 

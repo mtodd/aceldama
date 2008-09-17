@@ -1,0 +1,19 @@
+# = Database configuration
+
+credentials: &credentials
+  adapter: mysql
+  host: localhost
+  username: aceldama
+  password: 
+
+development:
+  database: aceldama_development
+  <<: *credentials
+
+test:
+  database: aceldama_test
+  <<: *credentials
+
+production:
+  database: aceldama_production
+  <<: *credentials

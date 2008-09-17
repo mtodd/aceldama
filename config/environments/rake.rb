@@ -5,3 +5,13 @@ Merb::Config.use { |c|
   c[:log_auto_flush ] = true
   c[:log_file] = Merb.log_path / 'merb_rake.log'
 }
+
+Halcyon.config.use do |c|
+  c[:environment] = :test
+  
+  c[:logging] = {
+    :type => 'Logger',
+    # :file => nil, # nil is STDOUT
+    :level => 'error'
+  }
+end
