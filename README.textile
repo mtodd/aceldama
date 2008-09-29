@@ -1,0 +1,15 @@
+h1. Aceldama
+
+An service for embedded Javascript site components.
+
+h2. TODO
+
+* fix Halcyon's dependency on the older Merb::Router
+* add support for Halcyon's controllers being in modules
+* 
+
+h2. License
+
+This is licensed under the MIT License.
+
+TODO: copy text
