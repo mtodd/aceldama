@@ -1,5 +1,5 @@
 module Service
-  class Comments < Halcyon::Controller
+  class Comments < Service::Application
     
     def comments
       @comments = Comment.all
