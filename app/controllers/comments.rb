@@ -1,6 +1,6 @@
 class Comments < Application
 
-  provides :js
+  provides :js, :json
   
   # ...and remember, everything returned from an action
   # goes to the client...
