@@ -5,8 +5,3 @@ Merb::Config.use { |c|
   c[:log_level] = :error
   c[:log_file] = Merb.log_path + "/production.log"
 }
-
-
-Halcyon.config.use do |c|
-  c[:environment] = :production
-end

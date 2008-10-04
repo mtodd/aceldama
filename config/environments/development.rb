@@ -6,8 +6,3 @@ Merb::Config.use { |c|
   c[:log_auto_flush ] = true
   c[:log_level] = :debug
 }
-
-
-Halcyon.config.use do |c|
-  c[:environment] = :development
-end
