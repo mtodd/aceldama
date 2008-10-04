@@ -1,1 +1,9 @@
-document.write('ohai!');
+<%# Delivery %>
+document.write('<div id="comments"></div>');
+
+<%# Content %>
+<% @comments.each do |comment| %>
+  $('<div></div>').attr("id","comment-<%= comment.id %>").html($(
+    "<p><%= comment.body %></p>"
+  )).appendTo('#comments');
+<% end %>
