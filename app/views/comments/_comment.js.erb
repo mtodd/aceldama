@@ -1,0 +1,3 @@
+$('<div></div>').attr("id","comment-<%= comment.id %>").html($(
+  "<p><%= comment.body.gsub("\n",'\n') %></p><span><%= h comment.author %></span>"
+)).appendTo('#comments');
