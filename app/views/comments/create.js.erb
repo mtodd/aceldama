@@ -1,0 +1,14 @@
+<%# Reset form contents %>
+$('#new-comment-form .field :input').each(function(){
+  this.value = '';
+});
+
+<%# Insert comment %>
+comment = document._comment_template.clone().html();
+comment = comment.replace(/\{body\}/, "<%= @comment.body.gsub("\n","<br />") %>");
+comment = comment.replace(/\{email\}/, "<%= @comment.user.email %>")
+comment = comment.replace(/\{created_at\}/, "<%= @comment.created_at.strftime("%Y-%m-%d") %>")
+$(comment).attr('id', "comment-<%= @comment.id %>").prependTo('#comments');
+
+<%# Reeable the submit button %>
+$('#new-comment-form .submit :input').attr('disable', false);

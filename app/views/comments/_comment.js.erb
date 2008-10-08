@@ -1,4 +1,5 @@
-
-$('<div></div>').attr("id","comment-<%= comment.id %>").html($(
-  "<p><%= comment.body.gsub("\n",'\n') %></p><span><%= h comment.user.username %></span>"
-)).appendTo('#comments');
+comment = document._comment_template.clone().html();
+comment = comment.replace(/\{body\}/, "<%= comment.body.gsub("\n","<br />") %>");
+comment = comment.replace(/\{email\}/, "<%= comment.user.email %>")
+comment = comment.replace(/\{created_at\}/, "<%= comment.created_at.strftime("%Y-%m-%d") %>")
+$(comment).attr('id', "comment-<%= comment.id %>").appendTo('#comments');

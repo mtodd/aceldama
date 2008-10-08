@@ -118,3 +118,26 @@ a:hover {
   margin-left: 3.0em;
   list-style: none;
 }
+
+/*Comment Styles*/
+#comments {
+  padding: 0 1em 1em;
+}
+#comments .comment {
+  padding-bottom: 1em;
+}
+#comments .comment .body {
+  font-size: 1.25em;
+}
+#comments .comment .info {
+  padding-top: 0.5em;
+  font-style: italic;
+  color: #888;
+}
+#comments .comment .info .author, #comments .comment .info .posted {
+  font-weight: bold;
+  color: #666;
+}
+#new-comment-form.errors .field label {
+  color: #F00;
+}
