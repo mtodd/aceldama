@@ -1,9 +1,38 @@
-<%# Delivery %>
-document.write('<div id="comments"></div>');
+<% document_write do %>
+  <%# Delivery %>
+  <div id="comments"></div>
+  <%# Comment Template %>
+  <div id="comment-template-container" style="display:block;">
+    <div id="comment-template" class="comment">
+      <div class="body">{body}</div>
+      <div>
+        by <span class="author">{user}</span>
+        on <span class="posted">{created_at}</span>
+      </div>
+    </div>
+  </div>
+  <%# Form %>
+  <h4>New Comment</h4>
+  <div id="new-comment">
+    <form action="/comments" method="POST" id="new-comment-form">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" name="username" />
+      </div>
+      <div class="field">
+        <label for="body">Comment</label>
+        <textarea name="body" cols="30" rows="5"></textarea>
+      </div>
+      <div class="field"><input type="submit" value="submit" /></div>
+    </form>
+  </div>
+<% end %>
 
-<%# Content %>
-$(
+$(function(){
+  document._comment_template = $('#comment-template').clone();
+  $('#comment-template').remove();
+  <%# Content %>
   <% @comments.each do |comment| %>
     <%= partial "comments/comment", :with => comment %>
   <% end %>
-)();
+});

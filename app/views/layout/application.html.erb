@@ -7,8 +7,34 @@
     <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
   </head>
   <body>
-    <%= catch_content :for_layout %>
-    <h2>Comments</h2>
-    <script type="text/javascript" src="http://localhost:4000/comments.js"></script>
+    
+    <div id="header-container">
+      <h1>Something interesting.</h1>
+    </div>
+    
+    <div class="spacer">&nbsp;</div>
+    
+    <div id="left-container">
+      <%= catch_content :for_layout %>
+    </div>
+    
+    <div id="main-container">
+      
+      <%= partial "home/menu" %>
+      <div class="spacer">&nbsp;</div>
+      
+      <div id="site-comments-container">
+        <h2>Comments</h2>
+        <div class="spacer">&nbsp;</div>
+        <script type="text/javascript" src="http://localhost:4000/comments.js?page=<%= Merb::Request.escape(request.full_uri) %>"></script>
+      </div>
+      
+    </div>
+    
+    <div class="spacer">&nbsp;</div>
+    
+    <div id="footer-container">
+      &copy; 2008 Matt Todd
+    </div>
   </body>
 </html>

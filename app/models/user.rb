@@ -1,18 +1,16 @@
-class Comment
+class User
   include DataMapper::Resource
   
   ### Properties
   
   property :id, Integer, :serial => true
-  property :page_id, Integer
-  property :body, Text, :lazy => true
-  property :user_id, Integer
+  property :email, String
+  property :password, String
   property :created_at, DateTime
   property :updated_at, DateTime
   
   ### Associations
   
-  belongs_to :user
-  belongs_to :page
+  has n, :comments
   
 end

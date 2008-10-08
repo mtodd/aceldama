@@ -4,7 +4,13 @@ class Comments < Application
   
   def index
     @comments = Comment.all
-    render
+    
+    case content_type
+    when :js
+      render
+    when :json
+      render
+    end
   end
   
 end

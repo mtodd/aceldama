@@ -64,7 +64,7 @@ h3 {
 
 #left-container {
   float: left;
-  width: 250px;
+  width: 450px;
   background-color: #FFFFFF;
   color: black;
 }
@@ -74,7 +74,7 @@ h3 {
 }
 
 #main-container {
-  margin: 5px 5px 5px 260px;
+  margin: 5px 5px 5px 460px;
   padding: 15px;
   border-left: 1px solid silver;
   min-height: 400px;
@@ -116,4 +116,5 @@ a:hover {
 }
 #main-container ul {
   margin-left: 3.0em;
+  list-style: none;
 }
