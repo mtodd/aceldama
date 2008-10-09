@@ -52,7 +52,7 @@ $(function(){
     
     // submit form
     if(!$('#new-comment-form').hasClass('errors')) {
-      $.post($(this).attr('action'), params, function(data, status){eval(data);}, 'script');
+      $.post($(this).attr('action'), params, function(d,s){}, 'script');
     } else {
       $('#new-comment-form .submit :input').attr('disable', false);
     }

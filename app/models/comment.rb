@@ -15,4 +15,10 @@ class Comment
   belongs_to :user
   belongs_to :page
   
+  ### Scopes
+  
+  def self.recent
+    all(:created_at.gt => (Time.now - 1*24*60*60))
+  end
+  
 end
